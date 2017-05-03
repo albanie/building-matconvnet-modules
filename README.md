@@ -51,8 +51,8 @@ install `mcn_module_demo` with `vl_contrib` by specifying the name of the
 module together with the URL of the module list.
 
 
-To install (and test) `mcn_module_demo`, they can run the following sequence
-of commands:
+For example, to install (and test) `mcn_module_demo`, you can run the 
+following sequence of commands:
 
 ```
 vl_contrib('install', 'mcn_module_demo', 'contribUrl', 'github.com/albanie/matconvnet-contrib-test/') ;
