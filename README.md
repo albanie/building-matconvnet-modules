@@ -35,7 +35,30 @@ a `compile_<modeule-name>.m` script.  An example of how to do this is provided
 If you are sharing implementations of layers, it is helpful (and reassuring)
 to include unit tests for them. By providing a file called `test_<module-name>m`,
 the user is able to run these tests with the `vl_contrib` function. In 
-[test\_mcn\_module\_demo.m](), we call a helper function to check the derivatives of 
-our layer.
+[test\_mcn\_module\_demo.m](test_mcn_module_demo.m), we call a helper function 
+to check the derivatives of our layer implementation.
 
 ### Sharing the module
+
+To share your module, all that is required is to add the URL of your github 
+repository to a page in a format that `vl_contrib` can understand.  By default,
+it will look for modules listed on this [page](https://github.com/lenck/matconvnet-contrib-test).
+However, you can specify your own list of repos to be searched by the module 
+manager. 
+
+To illustrate, the URL of this repo has been added to a module list 
+[here](https://github.com/albanie/matconvnet-contrib-test). Users can now 
+install `mcn_module_demo` with `vl_contrib` by specifying the name of the 
+module together with the URL of the module list.
+
+
+To install (and test) `mcn_module_demo`, they can run the following sequence
+of commands:
+
+```
+vl_contrib('install', 'mcn_module_demo', 'contribUrl', 'github.com/albanie/matconvnet-contrib-test/') ;
+vl_contrib('setup', 'mcn_module_demo', 'contribUrl', 'github.com/albanie/matconvnet-contrib-test/') ;
+vl_contrib('test', 'mcn_module_demo', 'contribUrl', 'github.com/albanie/matconvnet-contrib-test/') ;
+```
+
+The module should now be installed in `<matconvnet-dir/contrib/mcn_module_demo>`.
