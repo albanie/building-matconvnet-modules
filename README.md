@@ -4,12 +4,13 @@ This repo walks through how to organize your code as a module that can be
 easily shared with other [MatConvNet](https://github.com/vlfeat/matconvnet) 
 users with the `vl_contrib` module manager (currently available on the 
 [contrib](https://github.com/vlfeat/matconvnet/tree/contrib) branch of the main repo). 
-As a demonstration, the task will be to share a minimal matconvnet layer (that takes an input 
-and multiplies it by two) as a module named `mcn_module_demo`. 
+As a demo, this example will create a minimal matconvnet layer (that takes an 
+input and multiplies it by two) as a module named `mcn_module_demo`. 
 
-Start off by creating a function called `vl_nnmulbytwo()` by putting it in a folder called 
-`matlab` (you can take a look at the function [here](matlab/vl_nnmulbytwo.m)). Although it is 
-not required, to help other users understand its operation we'll add an example usage 
+Start off by creating a function called `vl_nnmulbytwo()` by putting it in a 
+folder called `matlab` (you can take a look at the function 
+[here](matlab/vl_nnmulbytwo.m)). Although it is not required, to help other 
+users understand its operation we'll add an example usage 
 to [example/demo.m](example/demo.m).
 
 ### Pure MATLAB modules
@@ -41,9 +42,8 @@ in there.
 
 To share your module, all that is required is to add the URL of your github 
 repository to a page in a format that `vl_contrib` can understand.  By default,
-it will look for modules listed on this [page](https://github.com/lenck/matconvnet-contrib-test).
-However, you can specify your own list of repos to be searched by the module 
-manager. 
+it will look for modules listed on a centralized index.  However, you can specify 
+your own list of repos to be searched by the module manager. 
 
 To illustrate, the URL of this repo has been added to a module list 
 [here](https://github.com/albanie/matconvnet-contrib-test). Users can now 
