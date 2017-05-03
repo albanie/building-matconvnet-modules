@@ -19,4 +19,5 @@ if isempty(dzdy)
     y = x * 2 ;
 else
     % backward direction
+    y = {dzdy * 2} ;
 end

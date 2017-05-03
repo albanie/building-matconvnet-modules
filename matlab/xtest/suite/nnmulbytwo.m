@@ -8,9 +8,9 @@ classdef nnmulbytwo < nntest
 
       % check derivatives with numerical approximation
       dzdy = test.randn(size(y)) ;
-      derInputs = vl_nnmulbytwo(x,dzdy) ;
+      derInputs = vl_nnmulbytwo(x, dzdy) ;
       dzdx = derInputs{1} ;
-      test.der(@(w) vl_nnmulbytwo(x), dzdy, 1e-5*test.range) ;
+      test.der(@(x) vl_nnmulbytwo(x), x, dzdy, dzdx, 1e-5*test.range) ;
     end
 
   end
